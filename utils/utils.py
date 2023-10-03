@@ -25,10 +25,6 @@ def mask_prepare_message_number(message):
 
     return ' '.join(message_split[:-1]) + ' ' + hidden_number
 
-
-
-
-
 def mask_card_number(number: str):
     "Возвращение номера карты, в нужном формате."
     if number.isdigit() and len(number) == 16:
