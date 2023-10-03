@@ -1,5 +1,3 @@
-import pytest
-
 from utils.utils import filter_and_sorting
 from utils.utils import get_date
 from utils.utils import mask_prepare_message_number
@@ -29,7 +27,6 @@ def test_filter_and_sorting():
     assert dates == ["2022-01-01", "2021-12-31"]
 
 
-# Тесты для функции get_date
 
 def test_get_date_valid_format():
     # Проверка корректного формата даты
@@ -38,9 +35,9 @@ def test_get_date_valid_format():
     assert get_date(date_str) == expected_result
 
 
-# Напишем тест, который проверит, что функция работает правильно
+
 def test_mask_prepare_message_number():
-    # Тест с отсутствующим сообщением (None)
+    "Тест с отсутствующим сообщением (None)"
     message = None
     expected_result = 'Личный счет'
     assert mask_prepare_message_number(message) == expected_result
